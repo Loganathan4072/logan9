@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Title</title>
+</head>
+<body>
+    <div style="position: fixed;left:0;right: 0;top:0;background-color:rgb(94, 168, 224) ;">
+        <h1>POSEIDON</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a onclick="showLoginForm() ;">Login</a>
+            <div class="animation start-home"></div>
+            
+        </nav>
+    </div>
+    
+
+    <div class="flex-container" style="margin-top: 200px;">
+        <div class="left-column">
+            <div>
+                <h1>Water Status</h1>
+            </div>
+            <div class="region-container">
+                <!-- Content for Water-supply-regions -->
+                <div class="water-supply-regions">
+
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="map">
+                <!-- Content for Map -->
+            </div>
+        </div>
+    </div>
+
+    <!--grievance-bar-->
+    <nav id="c-circle-nav" class="c-circle-nav">
+        <button id="c-circle-nav__toggle" class="c-circle-nav__toggle">
+          <span>Toggle</span>
+        </button>
+        <ul class="c-circle-nav__items">
+          <li class="c-circle-nav__item">
+            <a onclick="openPopupForm();" class="c-circle-nav__link">
+                <img src="img/complain.png" style="height: 70px;width: 70px;align-items: center;margin:20px;"
+                alt="">
+              
+            </a>
+          </li>
+          <li class="c-circle-nav__item">
+            <a href="#" class="c-circle-nav__link">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDk2IDk2Ij48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNzAuMTI1IDM1LjQ3NWMtMS4yNS0xLjI1LTIuNzU4LTEuODc1LTQuNTI0LTEuODc1SDYwbC0xLjI3NC0zLjRjLS4zMTYtLjgxNy0uODk2LTEuNTItMS43MzctMi4xMTNzLTEuNzA3LS44ODctMi41OS0uODg3SDQxLjZjLS44ODQgMC0xLjc0Ni4yOTYtMi41ODguODg4cy0xLjQyIDEuMjk2LTEuNzM3IDIuMTEzTDM2IDMzLjZoLTUuNmMtMS43NjcgMC0zLjI3NS42MjUtNC41MjUgMS44NzVDMjQuNjI1IDM2LjcyNSAyNCAzOC4yMzMgMjQgNDB2MjIuNGMwIDEuNzY3LjYyNSAzLjI3NSAxLjg3NSA0LjUyNCAxLjI1IDEuMjUgMi43NTggMS44NzYgNC41MjUgMS44NzZoMzUuMmMxLjc2OCAwIDMuMjc1LS42MjUgNC41MjUtMS44NzZDNzEuMzc1IDY1LjY3NiA3MiA2NC4xNjcgNzIgNjIuNFY0MGMwLTEuNzY3LS42MjUtMy4yNzUtMS44NzUtNC41MjV6TTU1LjkxMyA1OS4xMTNDNTMuNzIgNjEuMzA1IDUxLjA4MyA2Mi40IDQ4IDYyLjRzLTUuNzItMS4wOTYtNy45MTMtMy4yODdTMzYuOCA1NC4yODMgMzYuOCA1MS4yYzAtMy4wODMgMS4wOTUtNS43MiAzLjI4Ny03LjkxMlM0NC45MTcgNDAgNDggNDBzNS43MiAxLjA5NiA3LjkxMyAzLjI4OGMyLjE5IDIuMTkgMy4yODcgNC44MyAzLjI4NyA3LjkxM3MtMS4wOTYgNS43Mi0zLjI4NyA3LjkxM3pNNDggNDRjLTEuOTgzIDAtMy42OC43MDQtNS4wODggMi4xMTMtMS40MDggMS40MS0yLjExMiAzLjEwNC0yLjExMiA1LjA4OCAwIDEuOTgzLjcwNCAzLjY4IDIuMTEyIDUuMDg4QzQ0LjMyMiA1Ny42OTYgNDYuMDE3IDU4LjQgNDggNTguNHMzLjY4LS43MDQgNS4wODgtMi4xMTJDNTQuNDk2IDU0Ljg4IDU1LjIgNTMuMTg0IDU1LjIgNTEuMmMwLTEuOTgzLS43MDQtMy42OC0yLjExMi01LjA4N0M1MS42NzggNDQuNzAzIDQ5Ljk4MyA0NCA0OCA0NHoiLz48L2c+PC9zdmc+"
+              alt="">
+            </a>
+          </li>
+        </ul>
+    </nav> 
+      
+    <button class="grievance-icon" onclick="openPopupForm();">
+        <!-- Grievance icon content -->
+        <img class="grievance-img" src="img/grievance icon.png" id="openGrievancePopup">
+    </button>
+
+     
+    <!-- Grievance Pop-up -->
+   
+    <div id="grievancePopup" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeGrievancePopup" onclick="cancel();">&times;</span>
+            <h2>Grievance Form</h2>
+            <form id="grievanceForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                <label for="grievance">Grievance:</label>
+                <textarea id="grievance" rows="4" required></textarea>
+                <button class="glow-on-hover" type="button" id="sendButton">Send Mail</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="login-form" id="loginForm">
+        <form >
+            <h2>Login</h2>
+            <label for="officerName">Officer Name:</label>
+            <input type="text" id="officerName" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button class="glow-on-hover" id="submit" onclick="openOfficerPage();" >Submit</button>
+        </form >
+    </div>
+    <script src="script.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>

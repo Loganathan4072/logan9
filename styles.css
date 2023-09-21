@@ -1,0 +1,652 @@
+/* Add your desired styles here */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #240e07;
+    border-radius: 8px;
+    font-size: 0;
+}
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+  }
+  a:nth-child(1) {
+    width: 100px;
+  }
+  a:nth-child(2) {
+    width: 110px;
+  }
+  a:nth-child(3) {
+    width: 100px;
+  }
+  a:nth-child(4) {
+    width: 160px;
+  }
+  nav .start-home, a:nth-child(1):hover~.animation {
+    width: 25%;
+    left: 0%;
+    background-color: #aebc1a;
+  }
+  nav .start-about, a:nth-child(2):hover~.animation {
+    width: 25%;
+    left: 25%;
+    background-color: #e74c3c;
+  }
+  nav .start-contact, a:nth-child(3):hover~.animation {
+    width: 25%;
+    left: 50%;
+    background-color: #ef3bf5;
+  }
+  nav .start-login, a:nth-child(4):hover~.animation {
+    width: 25%;
+    left: 75%;
+    background-color: #9b59b6;
+  }
+  
+  body {
+    font-size: 12px;
+    font-family: sans-serif;
+    background: rgb(224, 155, 94);
+  }
+  h1 {
+    text-align: center;
+    margin: 40px 0 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #3b89f5;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Cherry Swash', cursive;
+  }
+
+ img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.flex-container {
+    display: flex;
+    flex: 3;
+    margin-top: 110px;
+}
+
+.left-column {
+    flex: 2;
+    padding: 20px;
+    background-color: rgb(178, 35, 35);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    height: 100vh;
+  
+
+}
+
+.search-bar {
+    margin-bottom: 20px;
+   
+ 
+}
+
+.right-column {
+    flex: 3;
+    background-color: #f0f0f09d;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.grievance-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Add styles for the grievance icon */
+}
+/* Styling for the Login Form */
+.login-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #555;
+}
+
+/* Additional styles can be added as needed */
+/* Scrollbar for the left column in index.html */
+.left-column {
+    overflow-y: scroll;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #ccc transparent; /* Firefox */
+}
+
+/* Customize scrollbar track */
+.left-column::-webkit-scrollbar-track {
+    background-color: transparent; /* Chrome/Safari/Edge */
+}
+
+/* Customize scrollbar thumb */
+.left-column::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Chrome/Safari/Edge */
+    border-radius: 10px;
+}
+
+/* Customize scrollbar track */
+.left-column::-webkit-scrollbar-track {
+    background-color: transparent; /* Chrome/Safari/Edge */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Styles for Grievance Form in index.html */
+#grievanceForm {
+    margin-top: 20px;
+    width: 300px;
+  
+}
+
+#grievanceForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#grievanceForm input[type="text"],
+#grievanceForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: -5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#grievanceForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#grievanceForm button:hover {
+    background-color: #555;
+}
+.region-container{
+    
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding:10px;
+    margin-bottom: 15px;
+    background-color: #4a7791;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Add your additional styling for Grievance items as needed */
+.water-supply-regions{
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        padding:10px;
+        margin-bottom: 15px;
+        background-color:rgb(64, 80, 222);
+        
+    
+}
+.water-supply-regions p{
+      color: aqua;
+      font-size: medium;
+}
+
+/*button styles*/
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.c-circle-nav {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    border-radius: 24px;
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav {
+      width: 96px;
+      height: 96px;
+      border-radius: 48px;
+    }
+  }
+  
+  .c-circle-nav__items {
+    display: block;
+    list-style: none;
+    position: absolute;
+    z-index: 90;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .c-circle-nav__item {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 24px;
+    opacity: 0;
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    -webkit-transition-duration: 0.3s, 0.3s;
+    transition-duration: 0.3s, 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.35, -0.59, 0.47, 0.97);
+    transition-timing-function: cubic-bezier(0.35, -0.59, 0.47, 0.97);
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav__item {
+      width: 96px;
+      height: 96px;
+      border-radius: 48px;
+    }
+  }
+
+  .c-circle-nav__item:nth-child(1) {
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+  }
+  
+  .c-circle-nav__item:nth-child(2) {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+  .c-circle-nav.is-active .c-circle-nav__item {
+    -webkit-transition-timing-function: cubic-bezier(0.35, 0.03, 0.47, 1.59);
+    transition-timing-function: cubic-bezier(0.35, 0.03, 0.47, 1.59);
+  }
+  
+  .c-circle-nav.is-active .c-circle-nav__item:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transform: translate(-134x, -56px);
+    -ms-transform: translate(-134px, -56px);
+    transform: translate(-134px, -56px);
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav.is-active .c-circle-nav__item: nth-child(1) {
+      -webkit-transform: translate(-267px, 111px);
+      -ms-transform: translate(-267px, 111px);
+      transform: translate(-267px, 111px);
+    }
+  }
+  
+  .c-circle-nav.is-active .c-circle-nav__item:nth-child(2) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    -webkit-transform: translate(-204px, -204px);
+    -ms-transform: translate(-204px, -204px);
+    transform: translate(-204px, -204px);
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav.is-active ,.c-circle-nav__item: nth-child(2) {
+      -webkit-transform: translate(-280px, -111px);
+      -ms-transform: translate(-280px, -111px);
+      transform: translate(-280px, -111px);
+    }
+    .c-circle-nav.is-active .c-circle-nav__item {
+        opacity: 1;
+      }
+  }
+
+  .c-circle-nav__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav__link {
+      border-radius: 48px;
+    }
+  }
+  
+  .c-circle-nav__link img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .c-circle-nav__link:hover {
+    box-shadow: inset 0 0 0 2px #ff283c;
+  }
+  
+.c-circle-nav__toggle {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #ff283c;
+    font: inherit;
+    font-size: 0;
+    text-indent: -9999px;
+    border-radius: 24px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    /* reset some browser defaults */
+    
+    cursor: pointer;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav__toggle {
+      width: 96px;
+      height: 96px;
+      border-radius: 48px;
+    }
+  }
+  
+  .c-circle-nav__toggle:hover,
+  .c-circle-nav__toggle:focus,
+  .c-circle-nav__toggle.is-active {
+    outline: none;
+    background-color: #c10012;
+  }
+  
+  .c-circle-nav__toggle span,
+  .c-circle-nav__toggle span::before,
+  .c-circle-nav__toggle span::after {
+    display: block;
+    position: absolute;
+    height: 4px;
+    background: #fff;
+    border-radius: 1px;
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav__toggle span, .c-circle-nav__toggle span::before, .c-circle-nav__toggle span::after {
+      height: 8px;
+      border-radius: 2px;
+    }
+  }
+  
+  .c-circle-nav__toggle span {
+    top: 22px;
+    left: 10px;
+    right: 10px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav__toggle span {
+      top: 44px;
+      left: 20px;
+      right: 20px;
+    }
+  }
+  
+  .c-circle-nav__toggle span::before,
+  .c-circle-nav__toggle span::after {
+    left: 0;
+    width: 100%;
+    content: "";
+    -webkit-transition-duration: 0.3s, 0.3s;
+    transition-duration: 0.3s, 0.3s;
+    -webkit-transition-delay: 0.3s, 0s;
+    transition-delay: 0.3s, 0s;
+  }
+  
+  .c-circle-nav__toggle span::before {
+    top: -8px;
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, transform;
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav__toggle span::before {
+      top: -16px;
+    }
+  }
+  
+  .c-circle-nav__toggle span::after {
+    bottom: -8px;
+    -webkit-transition-property: bottom, -webkit-transform;
+    transition-property: bottom, transform;
+  }
+  
+  @media (min-width: 480px) and (min-height: 480px) {
+    .c-circle-nav__toggle span::after {
+      bottom: -16px;
+    }
+  }
+  /* button active state */
+  
+  .c-circle-nav__toggle.is-active span {
+    background: none;
+  }
+  
+  .c-circle-nav__toggle.is-active span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition-delay: 0s, 0.3s;
+    transition-delay: 0s, 0.3s;
+  }
+  
+  .c-circle-nav__toggle.is-active span::after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition-delay: 0s, 0.3s;
+    transition-delay: 0s, 0.3s;
+  }
+  /* -----------------------------------------------------------------------------
+  THE MASK COMPONENT
+  ----------------------------------------------------------------------------- */
+  /**
+  * Here's the mask component, which actually gets created and inserted to the
+  * DOM via JavaScript. It simply acts as an overlay to draw attention to the
+  * navigation when it is active. It also uses the .is-acvite state class.
+  */
+  
+  .c-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .c-mask.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  

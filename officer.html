@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="officer-styles.css">
+    <title>Officer Page</title>
+    
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link  href="node_modules/ol/ol.css">
+
+    <style>
+      .map {
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- Your navigation bar content here -->
+        <button id="openGrievanceMailbox" class="GrievanceMailBox" style="position: relative;left: 10; " onclick="openGrievancePopupForm();">
+            <img src="img/grievanceMail.png" style="height:40px;">
+        </button>
+       
+    </nav>
+    <div class="officer-container">
+        <div class="region-box" id="regions">
+            <h1>REGIONS</h1>
+            <!-- Content for the Region Box -->
+            <button class="add-icon" onclick="openPopupForm()">
+                <img class="add-icon-img" src="img/add-icon.png" alt="Add" >
+            </button>
+        </div>
+        <div> 
+            <div id="map" class="map" style="display: flex;flex:100%">
+                <!-- Content for the Officer Map -->
+            </div>
+            <div class="row">
+                <div class="col-auto">
+                  <span class="input-group">
+                    <label class="input-group-text" for="type">Geometry type:</label>
+                    <select class="form-select" id="type">
+                      <option value="Point">Point</option>
+                      <option value="LineString">LineString</option>
+                      <option value="Polygon">Polygon</option>
+                      <option value="Circle">Circle</option>
+                      <option value="None">None</option>
+                    </select>
+                  </span>
+                </div>
+            </div>
+        </div>
+           
+       
+    </div>
+  
+    
+    <!-- Popup form -->
+    <div class="popup" id="popup">
+        <h2>Add Region</h2>
+        <form id="region-form">
+            <label for="area-name">Area Name:</label>
+            <input type="text" id="area-name" required>
+            
+            <label for="supplier-name">Supplier Name:</label>
+            <input type="text" id="supplier-name" required>
+            
+            <label for="supplier-phone">Supplier Phone:</label>
+            <input type="text" id="supplier-phone" required>
+            
+            <label for="water-status">Water Status:</label>
+            <input type="text" id="water-status" required>
+            
+            <button type="button" onclick="addRegion()">Add Region</button>
+            <!-- ... Inside officer.html ... -->
+
+            
+           
+
+        </form>
+    </div>
+
+
+     <!-- GrievanceMails Pop-up -->
+     <div id="grievanceMailsPopup" class="grievanceMailsPopup">
+        <div class="modal-content">
+            <span class="close" id="closeGrievanceMailsPopup" onclick="closegrievanceMailsPopup()">&times;</span>
+            <!-- Add content for GrievanceMails here -->
+        </div>
+        <div id="grievances">
+           
+        </div>
+    </div>
+
+
+    <script type="module" src="main.js"></script>
+
+    <script src="officer-script.js"></script>
+</body>
+</html>
